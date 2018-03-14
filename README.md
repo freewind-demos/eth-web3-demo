@@ -3,6 +3,15 @@ Ethereum Web3.js Demo
 
 Use `web3` to interact with ethereum.
 
+There are 3 ways in this demo:
+
+1. Connect to ethereum simulator with rpc
+2. Connect to ethereum testnet with rpc
+3. Connect to ethereum testnet with ipc
+
+Connect to ethereum simulator with rpc
+--------------------------------------
+
 Install and start ethereum simulator:
 
 ```
@@ -14,12 +23,34 @@ Run demo code:
 
 ```
 npm install
-node index.js
+node src/test-rpc.js
 ```
 
 It will get balance from eth simulator.
 
-The code can't run with real ethereum node (I don't know what else should do for now).
+Connect to ethereum testnet with rpc
+------------------------------------
+
+```
+brew tap ethereum/ethereum
+brew install ethereum
+geth --testnet account new
+geth --testnet --rpc
+```
+
+```
+npm install
+node src/test-rpc.js
+```
+
+
+Connect to ethereum testnet with ipc
+-------------------------------------
+
+```
+geth --testnet
+```
+
 
 How to install ethereum
 -----------------------

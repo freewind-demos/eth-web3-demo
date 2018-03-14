@@ -6,7 +6,7 @@ web3.setProvider(new Web3.providers.HttpProvider("http://localhost:8545"))
 // in web3 1.0, there is no sync `web3.eth.coinbase`
 web3.eth.getCoinbase()
   .then(function(coinbase) {
-    console.log(coinbase);
+    console.log("coinbase:" + coinbase);
     return web3.eth.getBalance(coinbase);
   })
   .then(function(balance) {
